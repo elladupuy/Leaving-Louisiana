@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    font-family: 'kindergarten';
+    background-image: url('waterbackground.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'highway_gothic.normal';
+    src: url('Fonts/HWYGOTH.TTF') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'highway_gothic.wide';
+    src: url('Fonts/HWYGEXPD.TTF') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'highway_gothic.wider';
+    src: url('Fonts/HWYGEXPD.TTF') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'highway_gothic.skinny';
+    src: url('Fonts/HWYGNRRW.TTF') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'highway_gothic.skinnier';
+    src: url('Fonts/HWYGWDE.TTF') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* NAVBAR */
+.NavbarContent {
+    display: flex;
+    flex-direction: row;
+    ;
+}
+
+.navbar {
+    display: inline block;
+    overflow: hidden;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.373);
+    border-radius: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Style the button to remove default button appearance */
+.image-button {
+
+    top: 0;
+    left: 0;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Basic styling for the image inside the button */
+.image-button img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* The popover has basic built-in styling, but you can customize it */
+#LeavingLouisianaRoadSign {
+    position: flex;
+    flex-direction: row;
+    padding: 100px 100px 100px 100px;
+    background-color: rgb(186, 223, 232);
+    border: none;
+    border-radius: 15px;
+    /* Add more styles like max-width, box-shadow, etc. */
+}
+
+.closebutton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.navigationlinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+}
+
+.OpeningStatement {
+    position: flex;
+    color: rgba(88, 148, 237, 0.557);
+    border-width: 2px;
+    max-width: 400px;
+    border-color: rgba(88, 148, 237, 0.557);
+    border-style: solid;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.closebutton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* END OF NAV */
+
+
+.fade-container {
+    position: relative;
+    margin: 0 0 100px 100px;
+}
+
+
+.clickable-area {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.fade-image,
+.fade-text {
+    position: absolute;
+    margin: 0px 0 0 300px;
+    width: 800px;
+    border-radius: 15px;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+    /* Smooth transition */
+}
+
+.fade-text {
+    width: 900px;
+        height: auto;
+    opacity: 0;
+    /* Hidden by default */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+}
+
+/* When checkbox is checked, swap opacities */
+
+#fade-trigger:checked~.clickable-area .fade-image {
+    opacity: 0;
+}
+
+#fade-trigger:checked~.clickable-area .fade-text {
+    opacity: 1;
+}
